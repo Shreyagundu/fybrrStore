@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css">
+    <script src="https://unpkg.com/multiaddr/dist/index.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" integrity="sha512-VZ6m0F78+yo3sbu48gElK4irv2dzPoep8oo9LEjxviigcnnnNvnTOJRSrIhuFk68FMLOpiNz+T77nNY89rnWDg==" crossorigin="anonymous"></script>
+    <title>fybrrStore</title>
+</head>
+
+<body>
+    <h2>File Upload & Image Preview</h2>
+    <p class="lead">No Plugins <b>Just Javascript</b></p>
+
+    <!-- Upload  -->
+    <form id="file-upload-form" class="uploader">
+        <input id="file-upload" type="file" name="fileUpload" />
+
+        <label for="file-upload" id="file-drag">
+            <!-- <img id="file-image" src="#" alt="Preview" class="hidden"> -->
+            <span id="file-image" class="hidden" alt="Preview"><i class="fa fa-file fa-6" style="font-size: 80px; margin: 10px;" aria-hidden="true"></i></span>
+            <div id="start">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            <div>Select a file or drag here</div>
+            <div id="notimage" class="hidden">Please select an image</div>
+            <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+            </div>
+            <div id="response" class="hidden">
+            <div id="messages"></div>
+            <progress class="progress" id="file-progress" value="0">
+                <span>0</span>%
+            </progress>
+            </div>
+        </label>
+    </form>
+
+    <script src="../js/index.min.js"></script>
+    <script src="../js/ipfs.js"></script>
+    <script src="../js/upload.js"></script>
+    <script src="../js/ws-connect.js"></script>
+
+</body>
+
+</html>

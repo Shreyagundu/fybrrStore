@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/explorer.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <script src="https://unpkg.com/multiaddr/dist/index.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" integrity="sha512-VZ6m0F78+yo3sbu48gElK4irv2dzPoep8oo9LEjxviigcnnnNvnTOJRSrIhuFk68FMLOpiNz+T77nNY89rnWDg==" crossorigin="anonymous"></script>
+    <title>fybrrStore Explorer</title>
+</head>
+
+<body>
+    <div class="cm-address-bar-search" clear>
+        <div class="address-search">
+            <div class="pos"><input type="text" class="address-search-input">
+                <div class="cm-button address-button"><i class="fas fa-arrow-right"></i></div>
+                <div class="address-short-btn"></div>
+            </div>
+        </div>
+        <div class="search-file-and-folder">
+            <div class="pos"><input placeholder="Search.." type="text" class="files-search-input">
+                <div class="cm-button file-search-button"><i class="fas fa-search"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="theme-structure big-file-manager">
+        <!-- <ul>
+            <li class="file-sub-active show-up"><b>Project 01</b></li>
+            <li data-file-icon="folder"><b>Assets</b>
+                <ul>
+                    <li data-file-icon="folder"><b>image</b>
+                        <ul>
+                            <li data-file-id="sdfsdfsdfsdf45456sd" data-file-icon="video"><b>movie.mp4</b></li>
+                            <li data-file-id="sdfsdfsdf454" data-file-icon="image"><b>cat.png</b></li>
+                            <li data-file-id="sdf4334545" data-file-icon="image"><b>banner.jpg</b></li>
+                            <li data-file-id="sdfs4355" data-file-icon="image"><b>user.gif</b></li>
+                        </ul>
+                    </li>
+                    <li data-file-icon="folder"><b>fonts</b>
+                        <ul>
+                            <li data-file-icon="folder"><b>A-1</b></li>
+                            <li data-file-icon="folder"><b>B-1</b></li>
+                            <li data-file-icon="folder"><b>C-1</b>
+                                <ul>
+                                    <li data-file-icon="folder"><b>A-2</b></li>
+                                    <li data-file-icon="folder"><b>B-2</b></li>
+                                    <li data-file-icon="folder"><b>C-2</b>
+                                        <ul>
+                                            <li data-file-icon="folder"><b>A-3</b></li>
+                                            <li data-file-icon="folder"><b>B-3</b></li>
+                                            <li data-file-icon="folder"><b>C-3</b></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-file-icon="folder"><b>files</b></li>
+                    <li data-file-icon="folder"><b>random</b></li>
+                </ul>
+            </li>
+            <li data-file-icon="folder"><b>Pages</b>
+                <ul>
+                    <li data-file-id="5" data-file-icon="html"><b>main.html</b></li>
+                    <li data-file-id="6" data-file-icon="php"><b>error.php</b></li>
+                    <li data-file-id="7" data-file-icon="css"><b>serach-result.css</b></li>
+                    <li data-file-id="8" data-file-icon="js"><b>extra.js</b></li>
+                </ul>
+            </li>
+            <li data-file-icon="folder"><b>Layout</b>
+                <ul>
+                    <li data-file-icon="layout"><b>Two Column Left Image</b></li>
+                    <li data-file-icon="layout"><b>Three Column Equal</b></li>
+                    <li data-file-icon="layout"><b>Two Column</b></li>
+                    <li data-file-icon="layout"><b>Full Width</b></li>
+                </ul>
+            </li>
+            <li data-file-icon="folder"><b>File 04</b></li>
+        </ul> -->
+
+    </div>
+    <form id="file-upload-form" class="uploader">
+        <input id="file-upload" type="file" name="fileUpload" class="input-hide"/>
+
+        <label for="file-upload" id="file-drag">
+            <span id="file-upload-btn" class="float">
+                <i class="fa fa-plus my-float"></i>
+                <span class="hide">&nbsp;Upload File</span>
+            </span>
+            <div id="messages"></div>
+        </label>
+    </form>
+ <!--   <form id="file-upload-form" class="uploader">
+        <input id="file-upload" type="file" name="fileUpload" />
+
+        <label for="file-upload" id="file-drag">
+            <span id="file-upload-btn" class="float">
+                <i class="fa fa-plus my-float"></i>
+                <span class="hide">&nbsp;Upload File</span>
+            </span> -->
+            <!-- <img id="file-image" src="#" alt="Preview" class="hidden"> -->
+            <!-- <span id="file-image" class="hidden" alt="Preview"><i class="fa fa-file fa-6" style="font-size: 80px; margin: 10px;" aria-hidden="true"></i></span> -->
+            <!-- <div id="start">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            <div>Select a file or drag here</div>
+            <div id="notimage" class="hidden">Please select an image</div>
+            <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+            </div> -->
+            <!-- <div id="response" class="hidden">
+            <div id="messages"></div>
+            <progress class="progress" id="file-progress" value="0">
+                <span>0</span>%
+            </progress>
+            </div>
+        </label>
+    </form> -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.theme.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+    <script src="../js/index.min.js"></script>
+    <script src="../js/ipfs.js"></script>
+    <script src="../js/upload.js"></script>
+    <script src="../js/ws-connect.js"></script>
+    <script src="../js/explorer.js"></script>
+
+</body>
+
+</html>
